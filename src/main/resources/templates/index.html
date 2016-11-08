@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="connect-demo">
 <head>
     <title>Hello Spring Boot!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <!--<link href="../static/css/main.css"-->
-    <!--th:href="@{/css/main.css}"-->
-    <!--rel="stylesheet" media="screen"/>-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"/>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js"></script>-->
+    <!--<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.2.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.2.0.js"></script>
+    <script src="js/angular_module/tutorial.js"></script>
 </head>
 <body>
-<h1>hello Spring Boot</h1>
+<h1>Inhalt</h1>
+<ol>
+    <li>1. Punkt</li>
+    <li>2. Punkt</li>
+    <li>3. Punkt</li>
+</ol>
+<div ng-controller="PagerDemoCtrl">
+    <h4>Pager</h4>
+    <p>SliceData: {{sliceData}}</p>
+    <pre>You are currently on page {{currentPage}}</pre>
+    <ul uib-pager="" total-items="totalItems" ng-model="currentPage"></ul>
+</div>
 </body>
 </html>
